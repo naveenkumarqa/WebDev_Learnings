@@ -1,0 +1,88 @@
+/* Basic Styling */
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+/* Shared box style */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: #5750C7;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-box {
+  animation: rotate 5s linear infinite;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #fff;
+  }
+  50% {
+    box-shadow: 0 0 20px #fff;
+  }
+  100% {
+    box-shadow: 0 0 5px #fff;
+  }
+}
+
+.glow-box {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Color Change Animation */
+@keyframes colorChange {
+  0% {
+    background-color: #5750C7;
+  }
+  50% {
+    background-color: #FF5733;
+  }
+  100% {
+    background-color: #5750C7;
+  }
+}
+
+.color-box {
+  animation: colorChange 3s ease-in-out infinite;
+}
+
+/* Hover Glow Effect */
+.hover-glow-box:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Subtle Zoom Effect on Hover */
+.zoom-box:hover {
+  transform: scale(1.2);
+  transition: transform 0.6s ease;
+}
